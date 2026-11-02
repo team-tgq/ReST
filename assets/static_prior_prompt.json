@@ -1,0 +1,177 @@
+{
+  "system_prompt": "You are a snow hydrology expert supporting SWE forecasting.\nUse only supplied static geography (latitude, longitude, elevation, southness).\nSource and site_id are alignment keys, not evidence about observation quality or snow history.\nDo not retrieve or reconstruct station records, SWE, weather time series, missingness, or future observations.\nMechanisms are uncertain geographic hypotheses, not measured regimes or causal ground truth.\nLand cover, climate statistics and observation availability are unknown. Do not invent them.\nKeep the existing five prior outputs; prior_sparse_source means insufficient static evidence,\nnot measured missingness. Prefer uncertainty when geography cannot support a mechanism.\nReturn a compact JSON object that matches the schema exactly.",
+  "mechanism_guide": {
+    "cold_persistent_snowpack": "Cold sites with persistent seasonal snow, long snow duration, stable winter SWE, and late spring melt.",
+    "orographic_high_elevation_accumulation": "High-elevation terrain where orographic snowfall and large peak SWE dominate.",
+    "warm_maritime_rain_snow_transition": "Near-freezing or maritime-transition sites where rain/snow phase and midwinter melt are important.",
+    "ephemeral_low_elevation_snow": "Low-elevation or warm sites with intermittent, shallow, short-lived snow.",
+    "forest_canopy_interception_sublimation": "Forested or canopy-influenced sites where interception/sublimation can alter accumulation.",
+    "continental_dry_wind_redistribution": "Cold, dry, windy or exposed continental sites where redistribution and sublimation may matter.",
+    "sparse_or_uncertain": "Sparse observations, high missingness, conflicting evidence, or insufficient support for a specific mechanism."
+  },
+  "response_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "primary_mechanism": {
+        "type": "string",
+        "enum": [
+          "cold_persistent_snowpack",
+          "orographic_high_elevation_accumulation",
+          "warm_maritime_rain_snow_transition",
+          "ephemeral_low_elevation_snow",
+          "forest_canopy_interception_sublimation",
+          "continental_dry_wind_redistribution",
+          "sparse_or_uncertain"
+        ]
+      },
+      "secondary_mechanism": {
+        "type": "string",
+        "enum": [
+          "",
+          "cold_persistent_snowpack",
+          "orographic_high_elevation_accumulation",
+          "warm_maritime_rain_snow_transition",
+          "ephemeral_low_elevation_snow",
+          "forest_canopy_interception_sublimation",
+          "continental_dry_wind_redistribution",
+          "sparse_or_uncertain"
+        ]
+      },
+      "confidence": {
+        "type": "number",
+        "minimum": 0.0,
+        "maximum": 1.0
+      },
+      "rationale_short": {
+        "type": "string",
+        "maxLength": 320
+      },
+      "prior_accumulation": {
+        "type": "number",
+        "minimum": 0.0
+      },
+      "prior_stable_persistence": {
+        "type": "number",
+        "minimum": 0.0
+      },
+      "prior_melt": {
+        "type": "number",
+        "minimum": 0.0
+      },
+      "prior_high_elevation_cold_snow": {
+        "type": "number",
+        "minimum": 0.0
+      },
+      "prior_sparse_source": {
+        "type": "number",
+        "minimum": 0.0
+      }
+    },
+    "required": [
+      "primary_mechanism",
+      "secondary_mechanism",
+      "confidence",
+      "rationale_short",
+      "prior_accumulation",
+      "prior_stable_persistence",
+      "prior_melt",
+      "prior_high_elevation_cold_snow",
+      "prior_sparse_source"
+    ]
+  },
+  "batch_response_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "stations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "type": "string"
+            },
+            "site_id": {
+              "type": "string"
+            },
+            "primary_mechanism": {
+              "type": "string",
+              "enum": [
+                "cold_persistent_snowpack",
+                "orographic_high_elevation_accumulation",
+                "warm_maritime_rain_snow_transition",
+                "ephemeral_low_elevation_snow",
+                "forest_canopy_interception_sublimation",
+                "continental_dry_wind_redistribution",
+                "sparse_or_uncertain"
+              ]
+            },
+            "secondary_mechanism": {
+              "type": "string",
+              "enum": [
+                "",
+                "cold_persistent_snowpack",
+                "orographic_high_elevation_accumulation",
+                "warm_maritime_rain_snow_transition",
+                "ephemeral_low_elevation_snow",
+                "forest_canopy_interception_sublimation",
+                "continental_dry_wind_redistribution",
+                "sparse_or_uncertain"
+              ]
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0
+            },
+            "rationale_short": {
+              "type": "string",
+              "maxLength": 320
+            },
+            "prior_accumulation": {
+              "type": "number",
+              "minimum": 0.0
+            },
+            "prior_stable_persistence": {
+              "type": "number",
+              "minimum": 0.0
+            },
+            "prior_melt": {
+              "type": "number",
+              "minimum": 0.0
+            },
+            "prior_high_elevation_cold_snow": {
+              "type": "number",
+              "minimum": 0.0
+            },
+            "prior_sparse_source": {
+              "type": "number",
+              "minimum": 0.0
+            }
+          },
+          "required": [
+            "source",
+            "site_id",
+            "primary_mechanism",
+            "secondary_mechanism",
+            "confidence",
+            "rationale_short",
+            "prior_accumulation",
+            "prior_stable_persistence",
+            "prior_melt",
+            "prior_high_elevation_cold_snow",
+            "prior_sparse_source"
+          ]
+        }
+      }
+    },
+    "required": [
+      "stations"
+    ]
+  },
+  "input_policy": "static_only_v1",
+  "user_prompt_template": "{\n  \"task\": \"Classify this station into a physical snow mechanism and provide a soft MoE prior.\",\n  \"allowed_mechanisms\": {\n    \"cold_persistent_snowpack\": \"Cold sites with persistent seasonal snow, long snow duration, stable winter SWE, and late spring melt.\",\n    \"orographic_high_elevation_accumulation\": \"High-elevation terrain where orographic snowfall and large peak SWE dominate.\",\n    \"warm_maritime_rain_snow_transition\": \"Near-freezing or maritime-transition sites where rain/snow phase and midwinter melt are important.\",\n    \"ephemeral_low_elevation_snow\": \"Low-elevation or warm sites with intermittent, shallow, short-lived snow.\",\n    \"forest_canopy_interception_sublimation\": \"Forested or canopy-influenced sites where interception/sublimation can alter accumulation.\",\n    \"continental_dry_wind_redistribution\": \"Cold, dry, windy or exposed continental sites where redistribution and sublimation may matter.\",\n    \"sparse_or_uncertain\": \"Sparse observations, high missingness, conflicting evidence, or insufficient support for a specific mechanism.\"\n  },\n  \"prior_columns\": [\n    \"prior_accumulation\",\n    \"prior_stable_persistence\",\n    \"prior_melt\",\n    \"prior_high_elevation_cold_snow\",\n    \"prior_sparse_source\"\n  ],\n  \"normalization_instruction\": \"The prior_* values should be non-negative and reflect relative support; they will be normalized after generation.\",\n  \"station_static_geography\": {}\n}",
+  "batch_user_prompt_template": "{\n  \"task\": \"Classify each station into a physical snow mechanism and provide a soft MoE prior.\",\n  \"allowed_mechanisms\": {\n    \"cold_persistent_snowpack\": \"Cold sites with persistent seasonal snow, long snow duration, stable winter SWE, and late spring melt.\",\n    \"orographic_high_elevation_accumulation\": \"High-elevation terrain where orographic snowfall and large peak SWE dominate.\",\n    \"warm_maritime_rain_snow_transition\": \"Near-freezing or maritime-transition sites where rain/snow phase and midwinter melt are important.\",\n    \"ephemeral_low_elevation_snow\": \"Low-elevation or warm sites with intermittent, shallow, short-lived snow.\",\n    \"forest_canopy_interception_sublimation\": \"Forested or canopy-influenced sites where interception/sublimation can alter accumulation.\",\n    \"continental_dry_wind_redistribution\": \"Cold, dry, windy or exposed continental sites where redistribution and sublimation may matter.\",\n    \"sparse_or_uncertain\": \"Sparse observations, high missingness, conflicting evidence, or insufficient support for a specific mechanism.\"\n  },\n  \"prior_columns\": [\n    \"prior_accumulation\",\n    \"prior_stable_persistence\",\n    \"prior_melt\",\n    \"prior_high_elevation_cold_snow\",\n    \"prior_sparse_source\"\n  ],\n  \"normalization_instruction\": \"The prior_* values should be non-negative and reflect relative support; they will be normalized after generation.\",\n  \"batch_instruction\": \"Return exactly one stations[] item for each input summary. Echo source and site_id exactly so outputs can be audited and aligned.\",\n  \"station_static_geographies\": []\n}"
+}

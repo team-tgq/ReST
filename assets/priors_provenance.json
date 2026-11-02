@@ -1,0 +1,10 @@
+{
+  "rows": 942,
+  "input_policy": "static geography only; source/site_id are alignment keys",
+  "recorded_model_identifier": "gpt-5.5",
+  "recorded_generation_time": "2026-09-16T14:07:49.013560+00:00",
+  "generation_prompt_hash": "608f2fb1f221222d",
+  "original_table_sha256": "6477513d077929e013fde7017f4fb50725c88e51982cbffe402843ee9fc9c61f",
+  "public_numeric_table_sha256": "aa047ba9ef59ed3936551787ece1be02d6d7aac725e7620b4b3af2ef2687b2a5",
+  "notes": "Public table retains original numeric prior columns and alignment keys. Provider endpoint and local execution paths are omitted. The model identifier is generation metadata, not an independent provider attestation."
+}

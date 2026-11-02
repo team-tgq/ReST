@@ -1,0 +1,176 @@
+{
+  "snotel": {
+    "forcing_source_versions": {
+      "precipitation": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Local NRCS/SNOTEL station-date raw tables under data/raw/snotel for pre-v1 backfill.",
+      "relative_humidity_max": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Local NRCS/SNOTEL station-date raw tables under data/raw/snotel for pre-v1 backfill.",
+      "relative_humidity_min": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Local NRCS/SNOTEL station-date raw tables under data/raw/snotel for pre-v1 backfill.",
+      "shortwave_radiation": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Local NRCS/SNOTEL station-date raw tables under data/raw/snotel for pre-v1 backfill.",
+      "specific_humidity": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Local NRCS/SNOTEL station-date raw tables under data/raw/snotel for pre-v1 backfill.",
+      "tb_19ve": "NSIDC AMSR-E/AMSR2 Unified L3 Daily 25 km Brightness Temperatures and Sea Ice Concentration Polar Grids V001.",
+      "tb_37ve": "NSIDC AMSR-E/AMSR2 Unified L3 Daily 25 km Brightness Temperatures and Sea Ice Concentration Polar Grids V001.",
+      "tb_diff": "NSIDC AMSR-E/AMSR2 Unified L3 Daily 25 km Brightness Temperatures and Sea Ice Concentration Polar Grids V001.",
+      "tmax": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Local NRCS/SNOTEL station-date raw tables under data/raw/snotel for pre-v1 backfill.",
+      "tmin": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Local NRCS/SNOTEL station-date raw tables under data/raw/snotel for pre-v1 backfill.",
+      "wind_velocity": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Local NRCS/SNOTEL station-date raw tables under data/raw/snotel for pre-v1 backfill."
+    },
+    "unit_conversion_notes": {
+      "precipitation": "ERA5-Land total_precipitation_sum m -> mm",
+      "relative_humidity_max": "100 * es(dewpoint_temperature_2m_max) / es(temperature_2m_min), clipped to 0..100",
+      "relative_humidity_min": "100 * es(dewpoint_temperature_2m_min) / es(temperature_2m_max), clipped to 0..100",
+      "shortwave_radiation": "Canonical stored unit is J m-2 day-1. Local SNOTEL srad_info.csv daily-mean flux values in W m-2 are multiplied by 86400 s day-1; ERA5-Land daily accumulated surface solar radiation is retained in J m-2 day-1.",
+      "specific_humidity": "0.622 * mean(es(tdmax), es(tdmin)) / (surface_pressure - 0.378 * mean(es(tdmax), es(tdmin)))",
+      "tb_19ve": "AMSR 18.7V brightness temperature is retained in K-compatible native units.",
+      "tb_37ve": "AMSR 36.5V brightness temperature is retained in K-compatible native units.",
+      "tb_diff": "tb_diff = tb_19ve - tb_37ve.",
+      "tmax": "ERA5-Land temperature_2m_max K -> degC",
+      "tmin": "ERA5-Land temperature_2m_min K -> degC",
+      "wind_velocity": "sqrt(u_component_of_wind_10m^2 + v_component_of_wind_10m^2), m s-1"
+    },
+    "shortwave_radiation_unit_audit": {
+      "status": "ok",
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "target_unit": "J m-2 day-1"
+    }
+  },
+  "canswe": {
+    "forcing_source_versions": {
+      "precipitation": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "relative_humidity_max": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "relative_humidity_min": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "shortwave_radiation": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "specific_humidity": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "tb_19ve": "NSIDC AMSR-E/AMSR2 Unified L3 Daily 25 km Brightness Temperatures and Sea Ice Concentration Polar Grids V001.",
+      "tb_37ve": "NSIDC AMSR-E/AMSR2 Unified L3 Daily 25 km Brightness Temperatures and Sea Ice Concentration Polar Grids V001.",
+      "tb_diff": "NSIDC AMSR-E/AMSR2 Unified L3 Daily 25 km Brightness Temperatures and Sea Ice Concentration Polar Grids V001.",
+      "tmax": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "tmin": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "wind_velocity": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.; Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis."
+    },
+    "unit_conversion_notes": {
+      "precipitation": "ERA5-Land total_precipitation_sum m -> mm; Open-Meteo precipitation_sum is returned in mm/day and is written directly.",
+      "relative_humidity_max": "100 * es(dewpoint_temperature_2m_max) / es(temperature_2m_min), clipped to 0..100; Open-Meteo relative_humidity_2m_max is returned in percent and clipped to 0..100.",
+      "relative_humidity_min": "100 * es(dewpoint_temperature_2m_min) / es(temperature_2m_max), clipped to 0..100; Open-Meteo relative_humidity_2m_min is returned in percent and clipped to 0..100.",
+      "shortwave_radiation": "ERA5-Land surface_solar_radiation_downwards_sum retained as J m-2 day-1; Open-Meteo shortwave_radiation_sum is returned in MJ m-2 day-1 and converted to J m-2 day-1 by multiplying by 1e6. Canonical stored unit is J m-2 day-1.",
+      "specific_humidity": "0.622 * mean(es(tdmax), es(tdmin)) / (surface_pressure - 0.378 * mean(es(tdmax), es(tdmin))); Derived from Open-Meteo dew_point_2m_mean (degC) and surface_pressure_mean (hPa): 0.622 * e(dewpoint) / (pressure - 0.378 * e).",
+      "tb_19ve": "AMSR 18.7V brightness temperature is retained in K-compatible native units.",
+      "tb_37ve": "AMSR 36.5V brightness temperature is retained in K-compatible native units.",
+      "tb_diff": "tb_diff = tb_19ve - tb_37ve.",
+      "tmax": "ERA5-Land temperature_2m_max K -> degC; Open-Meteo temperature_2m_max is returned in degC and is written directly.",
+      "tmin": "ERA5-Land temperature_2m_min K -> degC; Open-Meteo temperature_2m_min is returned in degC and is written directly.",
+      "wind_velocity": "sqrt(u_component_of_wind_10m^2 + v_component_of_wind_10m^2), m s-1; Open-Meteo wind_speed_10m_max is returned in km/h and converted to m/s by dividing by 3.6."
+    },
+    "shortwave_radiation_unit_audit": {
+      "status": "ok",
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "target_unit": "J m-2 day-1"
+    }
+  },
+  "cdec_sw1_bulk": {
+    "forcing_source_versions": {
+      "precipitation": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.",
+      "relative_humidity_max": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.",
+      "relative_humidity_min": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.",
+      "shortwave_radiation": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.",
+      "specific_humidity": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.",
+      "tb_19ve": "NSIDC AMSR-E/AMSR2 Unified L3 Daily 25 km Brightness Temperatures and Sea Ice Concentration Polar Grids V001.",
+      "tb_37ve": "NSIDC AMSR-E/AMSR2 Unified L3 Daily 25 km Brightness Temperatures and Sea Ice Concentration Polar Grids V001.",
+      "tb_diff": "NSIDC AMSR-E/AMSR2 Unified L3 Daily 25 km Brightness Temperatures and Sea Ice Concentration Polar Grids V001.",
+      "tmax": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.",
+      "tmin": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata.",
+      "wind_velocity": "ECMWF/ERA5_LAND/DAILY_AGGR via Google Earth Engine, used by cleaned v1 backfill metadata."
+    },
+    "unit_conversion_notes": {
+      "precipitation": "ERA5-Land total_precipitation_sum m -> mm",
+      "relative_humidity_max": "100 * es(dewpoint_temperature_2m_max) / es(temperature_2m_min), clipped to 0..100",
+      "relative_humidity_min": "100 * es(dewpoint_temperature_2m_min) / es(temperature_2m_max), clipped to 0..100",
+      "shortwave_radiation": "ERA5-Land surface_solar_radiation_downwards_sum retained as J m-2 day-1; Canonical stored unit is J m-2 day-1.",
+      "specific_humidity": "0.622 * mean(es(tdmax), es(tdmin)) / (surface_pressure - 0.378 * mean(es(tdmax), es(tdmin)))",
+      "tb_19ve": "AMSR 18.7V brightness temperature is retained in K-compatible native units.",
+      "tb_37ve": "AMSR 36.5V brightness temperature is retained in K-compatible native units.",
+      "tb_diff": "tb_diff = tb_19ve - tb_37ve.",
+      "tmax": "ERA5-Land temperature_2m_max K -> degC",
+      "tmin": "ERA5-Land temperature_2m_min K -> degC",
+      "wind_velocity": "sqrt(u_component_of_wind_10m^2 + v_component_of_wind_10m^2), m s-1"
+    },
+    "shortwave_radiation_unit_audit": {
+      "status": "ok",
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "target_unit": "J m-2 day-1"
+    }
+  },
+  "norswe_region_europe_nonoverlap": {
+    "forcing_source_versions": {
+      "precipitation": "Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "relative_humidity_max": "Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "relative_humidity_min": "Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "shortwave_radiation": "Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "specific_humidity": "Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "tmax": "Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "tmin": "Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis.",
+      "wind_velocity": "Open-Meteo Historical Weather API daily archive backed by ERA5/ERA5-Land reanalysis."
+    },
+    "unit_conversion_notes": {
+      "precipitation": "Open-Meteo precipitation_sum is returned in mm/day and is written directly.",
+      "relative_humidity_max": "Open-Meteo relative_humidity_2m_max is returned in percent and clipped to 0..100.",
+      "relative_humidity_min": "Open-Meteo relative_humidity_2m_min is returned in percent and clipped to 0..100.",
+      "shortwave_radiation": "Open-Meteo shortwave_radiation_sum is returned in MJ m-2 day-1 and converted to J m-2 day-1 by multiplying by 1e6. Canonical stored unit is J m-2 day-1.",
+      "specific_humidity": "Derived from Open-Meteo dew_point_2m_mean (degC) and surface_pressure_mean (hPa): 0.622 * e(dewpoint) / (pressure - 0.378 * e).",
+      "tmax": "Open-Meteo temperature_2m_max is returned in degC and is written directly.",
+      "tmin": "Open-Meteo temperature_2m_min is returned in degC and is written directly.",
+      "wind_velocity": "Open-Meteo wind_speed_10m_max is returned in km/h and converted to m/s by dividing by 3.6."
+    },
+    "shortwave_radiation_unit_audit": {
+      "status": "ok",
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "target_unit": "J m-2 day-1"
+    }
+  }
+}

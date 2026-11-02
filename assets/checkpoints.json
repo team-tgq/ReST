@@ -1,0 +1,32 @@
+[
+  {
+    "file": "rest_temporal_seed_52.pt",
+    "seed": 52,
+    "protocol": "temporal",
+    "epoch": 29,
+    "bytes": 17095443,
+    "sha256": "044d36b7d698c45ab8813df01a652abca2fe5bbc8d809a5bc6402456d6c675d3",
+    "source_checkpoint_sha256": "903953566ee91231f9434358a33f8edc0e14577d6622fea164d2045ed91974c8",
+    "url": "https://github.com/team-tgq/ReST/releases/download/v1.0.1/rest_temporal_seed_52.pt"
+  },
+  {
+    "file": "rest_temporal_seed_101.pt",
+    "seed": 101,
+    "protocol": "temporal",
+    "epoch": 22,
+    "bytes": 17096201,
+    "sha256": "cfc90c3bf5483780780d2b49675005c4c89bc0786fce269ee75d8804edcddd5f",
+    "source_checkpoint_sha256": "b6be64b806175ad5cddf77c1fc5b02d34141870672d121268b2fd25959d42356",
+    "url": "https://github.com/team-tgq/ReST/releases/download/v1.0.1/rest_temporal_seed_101.pt"
+  },
+  {
+    "file": "rest_temporal_seed_211.pt",
+    "seed": 211,
+    "protocol": "temporal",
+    "epoch": 27,
+    "bytes": 17096201,
+    "sha256": "189595c6885cf2f7c957f7808deb1d5b6d2f15c01f533671f31a26f39f8e0059",
+    "source_checkpoint_sha256": "7dd8084003fc701203f64d437ef7d1869f492385949c41f6530207c103488d44",
+    "url": "https://github.com/team-tgq/ReST/releases/download/v1.0.1/rest_temporal_seed_211.pt"
+  }
+]

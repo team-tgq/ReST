@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this software release and the accompanying ReST manuscript."
+title: "ReST: Reliable Spatiotemporal Generalization for Snow Water Equivalent Forecasting"
+type: software
+authors:
+  - name: "ReST contributors"
+version: 1.0.1
+date-released: 2026-11-02
+license: MIT
+repository-code: "https://github.com/team-tgq/ReST"
+url: "https://github.com/team-tgq/ReST/releases/tag/v1.0.1"
