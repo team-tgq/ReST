@@ -1,5 +1,9 @@
 # Manuscript to implementation
 
+**English** | [简体中文](method.zh-CN.md)
+
+[Overview](../README.md) · [Data](data.md) · [Reproducibility](reproducibility.md)
+
 | Manuscript component | Implementation |
 |---|---|
 | §2.1: 30/30/75 historical positions | `data.history_indices` |

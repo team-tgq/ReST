@@ -1,5 +1,7 @@
 # ReST
 
+**English** | [简体中文](README.zh-CN.md)
+
 **Reliable Spatiotemporal Generalization for Snow Water Equivalent Forecasting**
 
 PyTorch implementation accompanying the ReST manuscript. ReST predicts the next

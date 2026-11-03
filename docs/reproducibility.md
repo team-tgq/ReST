@@ -1,5 +1,9 @@
 # Reproducibility and verification
 
+**English** | [简体中文](reproducibility.zh-CN.md)
+
+[Overview](../README.md) · [Method](method.md) · [Data](data.md)
+
 This is an independent release of the submitted ReST implementation. It was
 prepared from the local research code at commit `9fa628fb` and checked against
 the final manuscript titled *Reliable Spatiotemporal Generalization for Snow

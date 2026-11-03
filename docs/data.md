@@ -1,5 +1,9 @@
 # Data and access
 
+**English** | [简体中文](data.zh-CN.md)
+
+[Overview](../README.md) · [Method](method.md) · [Reproducibility](reproducibility.md)
+
 ## Sources used in the study
 
 The primary study uses 2010–2020 observations, with forecast initialization dates
