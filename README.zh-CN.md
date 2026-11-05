@@ -41,7 +41,7 @@ pytest -q
 
 ## 训练
 
-从独立的 [data-v1.0.1 数据发布页](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1)下载处理后实验数据、结果表及绘图源数据。数据包包含 399 个有效站点、590,988 个窗口及七种划分。使用方法见[数据说明](docs/data.zh-CN.md)，内容与限制见[数据发布详解](docs/data-release.zh-CN.md)。解压后，将下方命令的 `--data` 指向包内 `task_datasets` 目录。
+从 [Zenodo 数据归档](https://doi.org/10.5281/zenodo.23968133)（DOI：10.5281/zenodo.23968133）或 [GitHub 镜像](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1)下载处理后实验数据、结果表及绘图源数据。数据包包含 399 个有效站点、590,988 个窗口及七种划分。使用方法见[数据说明](docs/data.zh-CN.md)，内容与限制见[数据发布详解](docs/data-release.zh-CN.md)。解压后，将下方命令的 `--data` 指向包内 `task_datasets` 目录。
 
 ```bash
 rest-train --data data/task_datasets --priors assets/station_priors.csv --protocol temporal --seed 52 --output runs/temporal/52
@@ -95,6 +95,8 @@ rest-predict --checkpoint rest_temporal_seed_52.pt --data data/task_datasets --p
 请引用配套论文标题，以及本仓库的版本或 commit。[CITATION.cff](CITATION.cff) 标识当前软件版本；论文作者元数据与 DOI 将在确定后补充。
 
 代码和作者制作的发布资产采用 [MIT 许可证](LICENSE)。原始观测与再分析数据仍遵循各提供方的使用条款。
+
+使用实验数据或归档结果时，请同时引用[研究数据归档](https://doi.org/10.5281/zenodo.23968133)。
 
 ## 联系方式
 

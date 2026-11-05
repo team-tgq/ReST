@@ -113,7 +113,7 @@ result values are provided, while baseline and ablation implementations remain
 outside this repository.
 
 For questions about these data or requests concerning additional research materials, email [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn).
-A Zenodo DOI is still pending; no processed-data DOI is claimed.
+The data are archived on [Zenodo](https://doi.org/10.5281/zenodo.23968133), DOI **10.5281/zenodo.23968133**.
 
 Read the package's `DATA_RIGHTS.md` before reuse. The derived dataset retains
 component-specific provider terms, including Hydro-Québec non-commercial/share-alike

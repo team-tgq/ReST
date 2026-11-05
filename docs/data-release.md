@@ -5,7 +5,7 @@
 Supporting data for *Reliable Spatiotemporal Generalization for Snow Water Equivalent Forecasting*.
 Code and Temporal checkpoints: https://github.com/team-tgq/ReST/releases/tag/v1.0.1.
 Data release: https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1.
-A Zenodo DOI has not yet been assigned to this package.
+The data are archived on [Zenodo](https://doi.org/10.5281/zenodo.23968133), DOI **10.5281/zenodo.23968133**.
 
 ## Contents and use
 
@@ -97,5 +97,5 @@ This is a derived research package assembled from the third-party sources listed
 `DATA_RIGHTS.md` and `assets/data_provenance.json`; it does not claim ownership of the
 original observations. Cite the original dataset providers and versions as well as the ReST
 paper, code version and this data release. Preserve component-specific licenses, including
-Hydro-Québec's non-commercial/share-alike terms. Use the GitHub data-release URL until a real
-Zenodo DOI is registered; no DOI is implied by the presence of a data package.
+Hydro-Québec's non-commercial/share-alike terms. Cite the version-specific data DOI
+[10.5281/zenodo.23968133](https://doi.org/10.5281/zenodo.23968133); the software release remains separately identified by its GitHub version.

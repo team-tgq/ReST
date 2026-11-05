@@ -51,8 +51,9 @@ reproduce the reported forecasting accuracy.
 
 ## Train
 
-Download the processed study arrays and result/figure data from the separate
-[data-v1.0.1 release](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1). The archive contains 399 active stations,
+Download the processed study arrays and result/figure data from
+[Zenodo](https://doi.org/10.5281/zenodo.23968133) (DOI: 10.5281/zenodo.23968133), with a
+[GitHub mirror](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1). The archive contains 399 active stations,
 590,988 windows and seven split definitions. See [Data](docs/data.md) for setup
 and [the data release guide](docs/data-release.md) for contents and limitations.
 After extracting the archive, point `--data` to its `task_datasets` directory.
@@ -134,6 +135,8 @@ paper author metadata and DOI can be added when finalized.
 
 Code and author-created release assets are distributed under the [MIT license](LICENSE).
 Original observational and reanalysis datasets retain their providers' terms.
+
+Please also cite the [research data archive](https://doi.org/10.5281/zenodo.23968133) when using the study datasets or archived results.
 
 ## Contact
 

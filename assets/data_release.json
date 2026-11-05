@@ -2,19 +2,25 @@
   "version": "data-v1.0.1",
   "code_version": "v1.0.1",
   "release_url": "https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1",
-  "download_url": "https://github.com/team-tgq/ReST/releases/download/data-v1.0.1/ReST_reproduction_data_v1_0_1.zip",
+  "download_url": "https://zenodo.org/api/records/23968133/files/ReST_reproduction_data_v1_0_1.zip/content",
   "archive": "ReST_reproduction_data_v1_0_1.zip",
   "bytes": 73251127,
   "sha256": "881802779daf19fa5b93e6fbbb367f011fad9a150ab4f6e6343785339ef49886",
   "active_stations": 399,
   "forecast_windows": 590988,
   "protocols": 7,
-  "doi": null,
+  "doi": "10.5281/zenodo.23968133",
   "rights": "Component-specific terms; see archive DATA_RIGHTS.md",
   "contact_email": "202512070422@std.uestc.edu.cn",
   "coverage": [
     "Primary task inputs and seven splits",
     "Publication result tables and figure source values",
     "External ReST prediction/observation pairs"
-  ]
+  ],
+  "doi_url": "https://doi.org/10.5281/zenodo.23968133",
+  "zenodo_record_url": "https://zenodo.org/records/23968133",
+  "zenodo_concept_doi": "10.5281/zenodo.23968132",
+  "publication_date": "2026-11-05",
+  "github_download_url": "https://github.com/team-tgq/ReST/releases/download/data-v1.0.1/ReST_reproduction_data_v1_0_1.zip",
+  "zenodo_checksum": "md5:cf4aed1c1b6c88336be3121692f9ea1b"
 }

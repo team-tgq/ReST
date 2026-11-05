@@ -76,6 +76,6 @@ rest-train --data task_datasets --priors assets/station_priors.csv --protocol te
 
 如需咨询数据或申请其他研究材料，请发送邮件至 [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn)。
 
-Zenodo DOI 尚待办理，当前不宣称已取得处理后数据 DOI。
+数据已在 [Zenodo](https://doi.org/10.5281/zenodo.23968133) 公开归档，DOI 为 **10.5281/zenodo.23968133**。
 
 复用前请阅读包内 `DATA_RIGHTS.md`。派生数据保留各提供方的许可条件，包括 Hydro-Québec 的非商业及相同方式共享条款；代码的 MIT 许可证不替代这些条款。

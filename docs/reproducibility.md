@@ -58,7 +58,7 @@ match the original archive exactly. Recalculation from the external prediction
 pairs gives station-equal MAE 14.5145572 mm (reported as 14.515 mm).
 See the [data release guide](data-release.md) and its numerical-validation record.
 The archive supports primary-dataset model runs and numerical reanalysis of the
-supplied results; a Zenodo DOI is pending. Plot source values do not imply that
+supplied results. The data are archived under DOI [10.5281/zenodo.23968133](https://doi.org/10.5281/zenodo.23968133). Plot source values do not imply that
 the original plotting pipelines or comparative model code are included.
 
 For questions about these data or requests concerning additional research materials, email [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn).

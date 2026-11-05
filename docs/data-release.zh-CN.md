@@ -2,7 +2,7 @@
 
 [English](data-release.md) | **简体中文**
 
-本包用于 *Reliable Spatiotemporal Generalization for Snow Water Equivalent Forecasting* 的数据获取、结果核对与绘图复现。配套代码和 Temporal 权重见 [ReST v1.0.1](https://github.com/team-tgq/ReST/releases/tag/v1.0.1)，数据发布入口为 [data-v1.0.1](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1)。当前尚未取得本数据包的 Zenodo DOI。
+本包用于 *Reliable Spatiotemporal Generalization for Snow Water Equivalent Forecasting* 的数据获取、结果核对与绘图复现。配套代码和 Temporal 权重见 [ReST v1.0.1](https://github.com/team-tgq/ReST/releases/tag/v1.0.1)，数据发布入口为 [data-v1.0.1](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1)。数据已在 [Zenodo](https://doi.org/10.5281/zenodo.23968133) 公开归档，DOI 为 **10.5281/zenodo.23968133**。
 
 ## 包含什么
 
@@ -38,4 +38,4 @@ rest-predict --checkpoint /path/to/rest_temporal_seed_52.pt --data task_datasets
 
 如需咨询数据或申请其他研究材料，请发送邮件至 [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn)。
 
-本包基于第三方公开数据加工而来，须保留原始提供方、数据版本和各组成部分的许可。尤其 Hydro-Québec 子集带有非商业及相同方式共享条件；整个数据包不套用代码的 MIT 许可证。详细来源、许可和署名见 [DATA_RIGHTS.md](https://github.com/team-tgq/ReST/releases/download/data-v1.0.1/DATA_RIGHTS.md) 及 `assets/data_provenance.json`。Zenodo DOI 归档尚待完成，不应在投稿时把 GitHub 发布误写为已取得 DOI。
+本包基于第三方公开数据加工而来，须保留原始提供方、数据版本和各组成部分的许可。尤其 Hydro-Québec 子集带有非商业及相同方式共享条件；整个数据包不套用代码的 MIT 许可证。详细来源、许可和署名见 [DATA_RIGHTS.md](https://github.com/team-tgq/ReST/releases/download/data-v1.0.1/DATA_RIGHTS.md) 及 `assets/data_provenance.json`。引用本数据版本时使用 DOI [10.5281/zenodo.23968133](https://doi.org/10.5281/zenodo.23968133)；软件版本仍通过独立的 GitHub 发布记录标识。
