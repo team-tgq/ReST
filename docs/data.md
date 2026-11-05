@@ -81,10 +81,37 @@ in `assets/priors_provenance.json`.
 
 ## Release status
 
-This release provides code, fixed priors, station identities, dataset provenance,
-input checksums, and three Temporal inference checkpoints. The large processed
-arrays, the Alaska evaluation package, the complete per-figure source tables,
-and other protocols' trained checkpoints are not publicly deposited here.
-No processed-data DOI is claimed. Those materials require a separate verified
-archive before a manuscript statement can describe them as openly available.
-The MIT license does not replace third-party data terms.
+The [data-v1.0.0 release](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0) provides the processed arrays for the 399
+active stations, all 590,988 window identities, seven splits, fixed priors,
+publication result tables, numerical source data for Figures 2–6, and external
+ReST prediction/observation pairs for three seeds. See the
+[data release guide](data-release.md) for the file-to-figure map and verified checks.
+Figure numbering follows the supplied manuscript and may change in the HESS draft.
+
+Download `ReST_reproduction_data_v1.zip` from that page and extract it. Its size is
+73,250,412 bytes and its SHA-256 is:
+
+```text
+f22759cd182b9a0207164baf754f22e84739f831344b3a21273d9e797258c11a
+```
+
+From the extracted `ReST_reproduction_data_v1` directory, after installing ReST:
+
+```bash
+rest-train --data task_datasets --priors assets/station_priors.csv --protocol temporal --seed 52 --output runs/temporal/52
+```
+
+The release removes inactive candidate stations while preserving all daily records
+for active stations. `station_index_map.csv` records compacted indices. Repository
+`assets/dataset_manifest.json` describes the original 942-candidate archive;
+use the downloaded package's `manifest.json` and `SHA256SUMS` for this subset.
+Machine-readable download metadata is in [assets/data_release.json](../assets/data_release.json).
+
+The historical Alaska multivariate inputs, fixed evaluation missingness-mask plans,
+and other protocols' trained checkpoints are not included. Comparative result values
+are provided, but baseline and ablation implementations remain outside this repository.
+A Zenodo DOI is still pending; no processed-data DOI is claimed.
+
+Read the package's `DATA_RIGHTS.md` before reuse. The derived dataset retains
+component-specific provider terms, including Hydro-Québec non-commercial/share-alike
+conditions; the code's MIT license does not replace these terms.

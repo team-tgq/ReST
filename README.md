@@ -51,8 +51,11 @@ reproduce the reported forecasting accuracy.
 
 ## Train
 
-Prepare the seven-file datasets described in [Data](docs/data.md). The large
-processed study arrays are **not included** in this code release.
+Download the processed study arrays and result/figure data from the separate
+[data-v1.0.0 release](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0). The archive contains 399 active stations,
+590,988 windows and seven split definitions. See [Data](docs/data.md) for setup
+and [the data release guide](docs/data-release.md) for contents and limitations.
+After extracting the archive, point `--data` to its `task_datasets` directory.
 
 ```bash
 rest-train --data data/task_datasets --priors assets/station_priors.csv --protocol temporal --seed 52 --output runs/temporal/52
@@ -102,8 +105,9 @@ priors in the same schema. Use `--protocol all --sources YOUR_SOURCE` and set
 `--start`/`--end` to the covered data period. `--issue-start` restricts evaluated
 initialization dates while retaining earlier records as history. No parameters
 or normalization statistics are fitted during evaluation. The 31-station Alaska
-benchmark arrays and priors are not bundled; pooled command-line metrics are
-not the station-weighted aggregates reported for that experiment.
+historical input arrays and priors are not bundled. The data release provides
+the archived prediction/observation pairs and plotted results for that benchmark;
+pooled command-line metrics are not its reported station-weighted aggregates.
 
 ## Repository guide
 

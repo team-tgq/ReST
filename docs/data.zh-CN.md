@@ -56,6 +56,22 @@ tb_19ve, tb_37ve, tb_diff
 
 ## 发布状态
 
-本次发布提供代码、固定先验、站点身份、数据来源记录、输入文件校验和，以及三个 Temporal 推理 checkpoint。大型处理后数组、Alaska 评估包、完整的逐图源数据表和其他协议的训练权重尚未在此公开归档。
+[data-v1.0.0 数据发布页](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0)已提供 399 个有效站点的处理后数组、全部 590,988 个窗口身份、七种划分、固定先验、论文结果表、图 2–6 的数值源数据，以及三个随机种子的外部 ReST 预测—观测配对。文件与图表对应关系、核验记录见[数据发布详解](data-release.zh-CN.md)。图号以已提供稿件为准，HESS 稿件调整后可能需要重编号。
 
-当前不宣称存在处理后数据 DOI。只有完成独立、可核验的归档后，才能在论文声明中将这些材料描述为公开可得。MIT 许可证不替代第三方数据的使用条款。
+下载发布页中的 `ReST_reproduction_data_v1.zip` 并解压。文件大小为 73,250,412 字节，SHA-256 为：
+
+```text
+f22759cd182b9a0207164baf754f22e84739f831344b3a21273d9e797258c11a
+```
+
+安装 ReST 后，在解压得到的 `ReST_reproduction_data_v1` 目录中运行：
+
+```bash
+rest-train --data task_datasets --priors assets/station_priors.csv --protocol temporal --seed 52 --output runs/temporal/52
+```
+
+发布包剔除了不贡献窗口的候选站点，保留有效站点的全部逐日记录。`station_index_map.csv` 记录站点索引压缩前后的对应关系。代码仓库的 `assets/dataset_manifest.json` 描述原始 942 候选站点归档；校验本次子集请使用下载包中的 `manifest.json` 和 `SHA256SUMS`。机器可读的下载信息见 [assets/data_release.json](../assets/data_release.json)。
+
+历史 Alaska 多变量输入、固定评估缺失掩码计划及其他协议的训练权重仍未包含。对比方法和消融的结果数值已提供，但其模型实现不公开。Zenodo DOI 尚待办理，当前不宣称已取得处理后数据 DOI。
+
+复用前请阅读包内 `DATA_RIGHTS.md`。派生数据保留各提供方的许可条件，包括 Hydro-Québec 的非商业及相同方式共享条款；代码的 MIT 许可证不替代这些条款。

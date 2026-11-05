@@ -51,6 +51,12 @@ figure-generation pipelines are outside this focused model release. Training
 augmentation is included; it is distinct from the fixed evaluation perturbations
 used for the manuscript's robustness tables.
 
-The public processed-data archive remains outstanding; provider links and file
-hashes establish provenance but are not a substitute for downloadable processed
-arrays. See [Data](data.md) for current access routes and release boundaries.
+The separate [data-v1.0.0 archive](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0) now supplies primary processed
+arrays, splits, publication result tables and numerical figure inputs. All window
+identities and seven split counts were checked; 32 sampled input/target records
+match the original archive exactly. Recalculation from the external prediction
+pairs gives station-equal MAE 14.5145572 mm (reported as 14.515 mm).
+See the [data release guide](data-release.md) and its numerical-validation record.
+Historical Alaska forcing inputs and fixed evaluation missingness plans remain
+unavailable in this release; a Zenodo DOI is pending. Plot source values do not
+imply that the original plotting pipelines or comparative model code are included.
