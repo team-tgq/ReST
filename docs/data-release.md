@@ -1,10 +1,10 @@
-# ReST research data, version 1
+# ReST research data, version 1.0.1
 
 **English** | [简体中文](data-release.zh-CN.md)
 
 Supporting data for *Reliable Spatiotemporal Generalization for Snow Water Equivalent Forecasting*.
 Code and Temporal checkpoints: https://github.com/team-tgq/ReST/releases/tag/v1.0.1.
-Data release: https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0.
+Data release: https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1.
 A Zenodo DOI has not yet been assigned to this package.
 
 ## Contents and use
@@ -83,15 +83,13 @@ All 590,988 window identities are preserved. Seven split counts match the manusc
 Figure 3 ReST lead means, Figure 4 source values, Figure 5 error bars, Figure 6 aggregation,
 and Table 4 category weighting were checked; see `provenance/numerical_validation.json`.
 
-This package supports primary-dataset training/evaluation and reanalysis of the supplied
-publication result and figure tables. It is not a claim that every manuscript experiment was
-rerun. In particular, the exact historical Alaska multivariate input package and the complete
-fixed missingness-mask plan archive were not recovered from the current checkout and are not
-included. The external prediction/observation pairs enable metric and figure reproduction,
-but do not replace historical forcing inputs needed to rerun external model inference.
-Not every baseline has per-window predictions in this package. The full-model code release
-does not implement the excluded comparative models. Upstream downloads alone do not establish
-byte-identical reconstruction of missing historical packages.
+This package supports primary-dataset training/evaluation and numerical reanalysis of
+the supplied publication result and figure tables. External benchmark data are provided as
+archived prediction/observation pairs for metric and figure reproduction. The contents are
+listed above; this is not an archive of every historical experiment artifact. Comparative
+model implementations are outside the full-ReST code release.
+
+For questions about these data or requests concerning additional research materials, email [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn).
 
 ## Attribution and citation
 

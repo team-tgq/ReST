@@ -1,8 +1,8 @@
-# ReST 研究复现数据包，版本 1
+# ReST 研究复现数据包，版本 1.0.1
 
 [English](data-release.md) | **简体中文**
 
-本包用于 *Reliable Spatiotemporal Generalization for Snow Water Equivalent Forecasting* 的数据获取、结果核对与绘图复现。配套代码和 Temporal 权重见 [ReST v1.0.1](https://github.com/team-tgq/ReST/releases/tag/v1.0.1)，数据发布入口为 [data-v1.0.0](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0)。当前尚未取得本数据包的 Zenodo DOI。
+本包用于 *Reliable Spatiotemporal Generalization for Snow Water Equivalent Forecasting* 的数据获取、结果核对与绘图复现。配套代码和 Temporal 权重见 [ReST v1.0.1](https://github.com/team-tgq/ReST/releases/tag/v1.0.1)，数据发布入口为 [data-v1.0.1](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1)。当前尚未取得本数据包的 Zenodo DOI。
 
 ## 包含什么
 
@@ -24,7 +24,7 @@ rest-predict --checkpoint /path/to/rest_temporal_seed_52.pt --data task_datasets
 
 权重下载链接和哈希见 `assets/checkpoints.json`。训练输出目录及预测输出文件应使用新路径。`splits/indices.npz` 以 `allow_pickle=False` 加载；其中各协议的索引对应 `splits/window_index.csv.gz` 的行。
 
-图表与文件的逐项对应关系见[英文说明的对照表](data-release.md#figure-and-table-correspondence)，字段、单位及统计口径见 [DATA_DICTIONARY.md](https://github.com/team-tgq/ReST/releases/download/data-v1.0.0/DATA_DICTIONARY.md)。当前编号以现有 ReST 稿件为参考，HESS 稿件如有重排，需同步调整编号。图 1 为模型概念图，没有数值源数据。
+图表与文件的逐项对应关系见[英文说明的对照表](data-release.md#figure-and-table-correspondence)，字段、单位及统计口径见 [DATA_DICTIONARY.md](https://github.com/team-tgq/ReST/releases/download/data-v1.0.1/DATA_DICTIONARY.md)。当前编号以现有 ReST 稿件为参考，HESS 稿件如有重排，需同步调整编号。图 1 为模型概念图，没有数值源数据。
 
 ## 已完成的核验
 
@@ -34,6 +34,8 @@ rest-predict --checkpoint /path/to/rest_temporal_seed_52.pt --data task_datasets
 
 ## 范围与来源
 
-本包支持主研究数据上的模型运行及所提供结果表、图表的数值复核。当前本地未找回完整的 Alaska 历史多变量输入包和固定缺失掩码计划归档，因此没有将它们标为已提供。外部预测/观测配对数据可用于重算误差与绘图，但不能替代重新运行外部模型所需的历史气象输入；也并非所有基线都提供逐窗口预测。
+本包支持主研究数据上的模型运行，以及所提供结果表、图表的数值复核。外部评估数据以归档的预测—观测配对形式提供，用于指标和绘图核算。具体内容以上方清单为准，本包并非全部历史实验产物的归档；对比模型实现不在完整 ReST 代码发布范围内。
 
-本包基于第三方公开数据加工而来，须保留原始提供方、数据版本和各组成部分的许可。尤其 Hydro-Québec 子集带有非商业及相同方式共享条件；整个数据包不套用代码的 MIT 许可证。详细来源、许可和署名见 [DATA_RIGHTS.md](https://github.com/team-tgq/ReST/releases/download/data-v1.0.0/DATA_RIGHTS.md) 及 `assets/data_provenance.json`。Zenodo DOI 归档尚待完成，不应在投稿时把 GitHub 发布误写为已取得 DOI。
+如需咨询数据或申请其他研究材料，请发送邮件至 [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn)。
+
+本包基于第三方公开数据加工而来，须保留原始提供方、数据版本和各组成部分的许可。尤其 Hydro-Québec 子集带有非商业及相同方式共享条件；整个数据包不套用代码的 MIT 许可证。详细来源、许可和署名见 [DATA_RIGHTS.md](https://github.com/team-tgq/ReST/releases/download/data-v1.0.1/DATA_RIGHTS.md) 及 `assets/data_provenance.json`。Zenodo DOI 归档尚待完成，不应在投稿时把 GitHub 发布误写为已取得 DOI。

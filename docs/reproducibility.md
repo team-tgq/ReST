@@ -46,17 +46,19 @@ weights bit for bit, even with the same seed. Exact scientific scores also
 depend on the archived processed arrays and the evaluation aggregation.
 
 This release was not used to retrain all 21 main experiments. The manuscript's
-18 external baselines, module ablations, the 42-condition paired missingness-plan archive, and
+18 external baselines, module ablations, and
 figure-generation pipelines are outside this focused model release. Training
 augmentation is included; it is distinct from the fixed evaluation perturbations
 used for the manuscript's robustness tables.
 
-The separate [data-v1.0.0 archive](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0) now supplies primary processed
+The separate [data-v1.0.1 archive](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1) now supplies primary processed
 arrays, splits, publication result tables and numerical figure inputs. All window
 identities and seven split counts were checked; 32 sampled input/target records
 match the original archive exactly. Recalculation from the external prediction
 pairs gives station-equal MAE 14.5145572 mm (reported as 14.515 mm).
 See the [data release guide](data-release.md) and its numerical-validation record.
-Historical Alaska forcing inputs and fixed evaluation missingness plans remain
-unavailable in this release; a Zenodo DOI is pending. Plot source values do not
-imply that the original plotting pipelines or comparative model code are included.
+The archive supports primary-dataset model runs and numerical reanalysis of the
+supplied results; a Zenodo DOI is pending. Plot source values do not imply that
+the original plotting pipelines or comparative model code are included.
+
+For questions about these data or requests concerning additional research materials, email [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn).

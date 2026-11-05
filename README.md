@@ -52,7 +52,7 @@ reproduce the reported forecasting accuracy.
 ## Train
 
 Download the processed study arrays and result/figure data from the separate
-[data-v1.0.0 release](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0). The archive contains 399 active stations,
+[data-v1.0.1 release](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1). The archive contains 399 active stations,
 590,988 windows and seven split definitions. See [Data](docs/data.md) for setup
 and [the data release guide](docs/data-release.md) for contents and limitations.
 After extracting the archive, point `--data` to its `task_datasets` directory.
@@ -104,9 +104,9 @@ For new stations, provide their daily history, static attributes, and offline
 priors in the same schema. Use `--protocol all --sources YOUR_SOURCE` and set
 `--start`/`--end` to the covered data period. `--issue-start` restricts evaluated
 initialization dates while retaining earlier records as history. No parameters
-or normalization statistics are fitted during evaluation. The 31-station Alaska
-historical input arrays and priors are not bundled. The data release provides
-the archived prediction/observation pairs and plotted results for that benchmark;
+or normalization statistics are fitted during evaluation. For the 31-station Alaska
+benchmark, the data release provides archived prediction/observation pairs and
+plotted results;
 pooled command-line metrics are not its reported station-weighted aggregates.
 
 ## Repository guide
@@ -134,3 +134,7 @@ paper author metadata and DOI can be added when finalized.
 
 Code and author-created release assets are distributed under the [MIT license](LICENSE).
 Original observational and reanalysis datasets retain their providers' terms.
+
+## Contact
+
+For questions about these data or requests concerning additional research materials, email [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn).

@@ -1,19 +1,20 @@
 {
-  "version": "data-v1.0.0",
+  "version": "data-v1.0.1",
   "code_version": "v1.0.1",
-  "release_url": "https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0",
-  "download_url": "https://github.com/team-tgq/ReST/releases/download/data-v1.0.0/ReST_reproduction_data_v1.zip",
-  "archive": "ReST_reproduction_data_v1.zip",
-  "bytes": 73250412,
-  "sha256": "f22759cd182b9a0207164baf754f22e84739f831344b3a21273d9e797258c11a",
+  "release_url": "https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1",
+  "download_url": "https://github.com/team-tgq/ReST/releases/download/data-v1.0.1/ReST_reproduction_data_v1_0_1.zip",
+  "archive": "ReST_reproduction_data_v1_0_1.zip",
+  "bytes": 73251127,
+  "sha256": "881802779daf19fa5b93e6fbbb367f011fad9a150ab4f6e6343785339ef49886",
   "active_stations": 399,
   "forecast_windows": 590988,
   "protocols": 7,
   "doi": null,
   "rights": "Component-specific terms; see archive DATA_RIGHTS.md",
-  "missing_materials": [
-    "Historical Alaska multivariate input package",
-    "Fixed evaluation missingness-mask plans",
-    "Trained checkpoints for non-Temporal protocols"
+  "contact_email": "202512070422@std.uestc.edu.cn",
+  "coverage": [
+    "Primary task inputs and seven splits",
+    "Publication result tables and figure source values",
+    "External ReST prediction/observation pairs"
   ]
 }

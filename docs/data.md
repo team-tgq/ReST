@@ -81,21 +81,21 @@ in `assets/priors_provenance.json`.
 
 ## Release status
 
-The [data-v1.0.0 release](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0) provides the processed arrays for the 399
+The [data-v1.0.1 release](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1) provides the processed arrays for the 399
 active stations, all 590,988 window identities, seven splits, fixed priors,
 publication result tables, numerical source data for Figures 2–6, and external
 ReST prediction/observation pairs for three seeds. See the
 [data release guide](data-release.md) for the file-to-figure map and verified checks.
 Figure numbering follows the supplied manuscript and may change in the HESS draft.
 
-Download `ReST_reproduction_data_v1.zip` from that page and extract it. Its size is
-73,250,412 bytes and its SHA-256 is:
+Download `ReST_reproduction_data_v1_0_1.zip` from that page and extract it. Its size is
+73,251,127 bytes and its SHA-256 is:
 
 ```text
-f22759cd182b9a0207164baf754f22e84739f831344b3a21273d9e797258c11a
+881802779daf19fa5b93e6fbbb367f011fad9a150ab4f6e6343785339ef49886
 ```
 
-From the extracted `ReST_reproduction_data_v1` directory, after installing ReST:
+From the extracted `ReST_reproduction_data_v1_0_1` directory, after installing ReST:
 
 ```bash
 rest-train --data task_datasets --priors assets/station_priors.csv --protocol temporal --seed 52 --output runs/temporal/52
@@ -107,9 +107,12 @@ for active stations. `station_index_map.csv` records compacted indices. Reposito
 use the downloaded package's `manifest.json` and `SHA256SUMS` for this subset.
 Machine-readable download metadata is in [assets/data_release.json](../assets/data_release.json).
 
-The historical Alaska multivariate inputs, fixed evaluation missingness-mask plans,
-and other protocols' trained checkpoints are not included. Comparative result values
-are provided, but baseline and ablation implementations remain outside this repository.
+The archive covers the primary task datasets and the published numerical results;
+external benchmark data are supplied as prediction/observation pairs. Comparative
+result values are provided, while baseline and ablation implementations remain
+outside this repository.
+
+For questions about these data or requests concerning additional research materials, email [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn).
 A Zenodo DOI is still pending; no processed-data DOI is claimed.
 
 Read the package's `DATA_RIGHTS.md` before reuse. The derived dataset retains

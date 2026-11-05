@@ -41,7 +41,7 @@ pytest -q
 
 ## 训练
 
-从独立的 [data-v1.0.0 数据发布页](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.0)下载处理后实验数据、结果表及绘图源数据。数据包包含 399 个有效站点、590,988 个窗口及七种划分。使用方法见[数据说明](docs/data.zh-CN.md)，内容与限制见[数据发布详解](docs/data-release.zh-CN.md)。解压后，将下方命令的 `--data` 指向包内 `task_datasets` 目录。
+从独立的 [data-v1.0.1 数据发布页](https://github.com/team-tgq/ReST/releases/tag/data-v1.0.1)下载处理后实验数据、结果表及绘图源数据。数据包包含 399 个有效站点、590,988 个窗口及七种划分。使用方法见[数据说明](docs/data.zh-CN.md)，内容与限制见[数据发布详解](docs/data-release.zh-CN.md)。解压后，将下方命令的 `--data` 指向包内 `task_datasets` 目录。
 
 ```bash
 rest-train --data data/task_datasets --priors assets/station_priors.csv --protocol temporal --seed 52 --output runs/temporal/52
@@ -73,7 +73,7 @@ rest-predict --checkpoint rest_temporal_seed_52.pt --data data/task_datasets --p
 
 该命令用于评估有标签的历史窗口，需要完整的未来十天目标。没有未来标签时，应构造历史输入张量，直接使用 `load_checkpoint`、其返回的 `Normalizer.inputs` 和模型进行预测；这些 API 不需要目标标签。
 
-迁移到新站点时，需按相同格式提供逐日历史、静态属性和离线先验。使用 `--protocol all --sources YOUR_SOURCE`，并通过 `--start`/`--end` 指定覆盖的数据区间。`--issue-start` 限制参与评估的起报日期，同时保留更早的历史记录。评估时不拟合模型参数或归一化统计。仓库未包含 Alaska 31 站点评估的历史输入数组及先验；数据发布包已提供该实验归档的预测—观测配对及绘图结果。命令行的合并指标不等同于该实验按站点加权聚合的结果。
+迁移到新站点时，需按相同格式提供逐日历史、静态属性和离线先验。使用 `--protocol all --sources YOUR_SOURCE`，并通过 `--start`/`--end` 指定覆盖的数据区间。`--issue-start` 限制参与评估的起报日期，同时保留更早的历史记录。评估时不拟合模型参数或归一化统计。对于 Alaska 31 站点评估，数据发布包提供该实验归档的预测—观测配对及绘图结果。命令行的合并指标不等同于该实验按站点加权聚合的结果。
 
 ## 仓库导览
 
@@ -95,3 +95,7 @@ rest-predict --checkpoint rest_temporal_seed_52.pt --data data/task_datasets --p
 请引用配套论文标题，以及本仓库的版本或 commit。[CITATION.cff](CITATION.cff) 标识当前软件版本；论文作者元数据与 DOI 将在确定后补充。
 
 代码和作者制作的发布资产采用 [MIT 许可证](LICENSE)。原始观测与再分析数据仍遵循各提供方的使用条款。
+
+## 联系方式
+
+如需咨询数据或申请其他研究材料，请发送邮件至 [202512070422@std.uestc.edu.cn](mailto:202512070422@std.uestc.edu.cn)。
